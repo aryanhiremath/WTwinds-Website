@@ -8,17 +8,34 @@
     --font-main: 'Inter', sans-serif;
 }
 
+<<<<<<< HEAD
+=======
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+>>>>>>> 7779ef8f344554302eeff5c891c7f88cb25b4567
 body {
     font-family: var(--font-main);
     color: var(--text-color);
     background: url('assets/images/background.png') no-repeat center center fixed;
     background-size: cover;
+<<<<<<< HEAD
+=======
+    line-height: 1.6;
+>>>>>>> 7779ef8f344554302eeff5c891c7f88cb25b4567
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
+<<<<<<< HEAD
 /* Overlay */
+=======
+/* Overlay to ensure text readability over the background */
+>>>>>>> 7779ef8f344554302eeff5c891c7f88cb25b4567
 body::before {
     content: '';
     position: fixed;
@@ -30,6 +47,7 @@ body::before {
     z-index: -1;
 }
 
+<<<<<<< HEAD
 /* Bootstrap Overrides & Custom Components */
 .navbar {
     backdrop-filter: blur(10px);
@@ -54,12 +72,79 @@ body::before {
     color: var(--primary-color) !important;
 }
 
+=======
+/* Header & Navigation */
+header {
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid var(--glass-border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-size: 1rem;
+}
+
+nav a:hover, nav a.active {
+    color: var(--primary-color);
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Glassmorphism Cards */
+>>>>>>> 7779ef8f344554302eeff5c891c7f88cb25b4567
 .glass-card {
     background: var(--glass-bg);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid var(--glass-border);
     border-radius: 16px;
+<<<<<<< HEAD
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     color: var(--text-color);
 }
@@ -96,3 +181,91 @@ footer {
     padding: 20px 0;
     margin-top: auto;
 }
+=======
+    padding: 40px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #fff, #a29bfe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #b2bec3;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: transform 0.3s ease, background 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #b2bec3;
+    font-size: 0.9rem;
+    margin-top: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
+        gap: 20px;
+        display: none;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+>>>>>>> 7779ef8f344554302eeff5c891c7f88cb25b4567
