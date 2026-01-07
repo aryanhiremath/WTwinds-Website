@@ -8,34 +8,26 @@
     --font-main: 'Inter', sans-serif;
 }
 
-<<<<<<< HEAD
-=======
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
->>>>>>> 7779ef8f344554302eeff5c891c7f88cb25b4567
+/* Body */
 body {
     font-family: var(--font-main);
     color: var(--text-color);
     background: url('assets/images/background.png') no-repeat center center fixed;
     background-size: cover;
-<<<<<<< HEAD
-=======
     line-height: 1.6;
->>>>>>> 7779ef8f344554302eeff5c891c7f88cb25b4567
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-<<<<<<< HEAD
-/* Overlay */
-=======
-/* Overlay to ensure text readability over the background */
->>>>>>> 7779ef8f344554302eeff5c891c7f88cb25b4567
+/* Background overlay */
 body::before {
     content: '';
     position: fixed;
@@ -47,33 +39,8 @@ body::before {
     z-index: -1;
 }
 
-<<<<<<< HEAD
-/* Bootstrap Overrides & Custom Components */
-.navbar {
-    backdrop-filter: blur(10px);
-    background: rgba(0, 0, 0, 0.3) !important;
-    border-bottom: 1px solid var(--glass-border);
-}
+/* ---------------- HEADER ---------------- */
 
-.navbar-brand {
-    font-weight: 700;
-    letter-spacing: 1px;
-    color: #fff !important;
-}
-
-.nav-link {
-    color: var(--text-color) !important;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.nav-link:hover,
-.nav-link.active {
-    color: var(--primary-color) !important;
-}
-
-=======
-/* Header & Navigation */
 header {
     padding: 20px 50px;
     display: flex;
@@ -95,6 +62,7 @@ header {
     letter-spacing: 1px;
 }
 
+/* Nav */
 nav ul {
     display: flex;
     list-style: none;
@@ -109,11 +77,12 @@ nav a {
     font-size: 1rem;
 }
 
-nav a:hover, nav a.active {
+nav a:hover,
+nav a.active {
     color: var(--primary-color);
 }
 
-/* Mobile Menu Toggle */
+/* Mobile menu icon */
 .menu-toggle {
     display: none;
     font-size: 1.5rem;
@@ -121,94 +90,72 @@ nav a:hover, nav a.active {
     color: #fff;
 }
 
-/* Main Content */
+/* ---------------- MAIN LAYOUT ---------------- */
+
 main {
     flex: 1;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     padding: 50px 20px;
 }
 
 .container {
     max-width: 1200px;
     width: 100%;
-    margin: 0 auto;
 }
 
-/* Glassmorphism Cards */
->>>>>>> 7779ef8f344554302eeff5c891c7f88cb25b4567
+/* ---------------- GLASS CARD ---------------- */
+
 .glass-card {
     background: var(--glass-bg);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid var(--glass-border);
     border-radius: 16px;
-<<<<<<< HEAD
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    color: var(--text-color);
-}
-
-h1,
-h2,
-h3 {
-    color: #fff;
-}
-
-h1 {
-    background: linear-gradient(to right, #fff, #a29bfe);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 700;
-}
-
-.btn-primary {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
-    border-radius: 50px;
-    padding: 10px 30px;
-    font-weight: 600;
-}
-
-.btn-primary:hover {
-    background-color: var(--secondary-color);
-    border-color: var(--secondary-color);
-}
-
-footer {
-    background: rgba(0, 0, 0, 0.5);
-    color: #b2bec3;
-    padding: 20px 0;
-    margin-top: auto;
-}
-=======
     padding: 40px;
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    max-width: 800px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    max-width: 900px;
     margin: 0 auto;
-    text-align: center;
+    text-align: left;
+    line-height: 1.9;
 }
 
+/* Headings */
 h1 {
     font-size: 3rem;
     margin-bottom: 20px;
     background: linear-gradient(to right, #fff, #a29bfe);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-weight: 700;
 }
 
-h2 {
-    font-size: 2rem;
-    margin-bottom: 15px;
-    color: #fff;
+h2, h3, h4 {
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 8px;
 }
 
+/* Text */
 p {
-    margin-bottom: 20px;
-    font-size: 1.1rem;
-    color: #b2bec3;
+    color: #dfe6e9;
+    margin-bottom: 12px;
+    font-size: 1.05rem;
 }
 
+/* Lists */
+.glass-card ul {
+    margin-left: 25px;
+    padding-left: 10px;
+    list-style: disc;
+}
+
+.glass-card li {
+    margin-bottom: 6px;
+}
+
+/* Buttons */
 .btn {
     display: inline-block;
     padding: 12px 30px;
@@ -217,7 +164,7 @@ p {
     text-decoration: none;
     border-radius: 50px;
     font-weight: 600;
-    transition: transform 0.3s ease, background 0.3s ease;
+    transition: 0.3s;
     border: none;
     cursor: pointer;
 }
@@ -227,7 +174,8 @@ p {
     transform: translateY(-2px);
 }
 
-/* Footer */
+/* ---------------- FOOTER ---------------- */
+
 footer {
     text-align: center;
     padding: 20px;
@@ -237,8 +185,10 @@ footer {
     margin-top: auto;
 }
 
-/* Responsive Design */
+/* ---------------- RESPONSIVE ---------------- */
+
 @media (max-width: 768px) {
+
     header {
         padding: 20px;
     }
@@ -252,7 +202,7 @@ footer {
         top: 100%;
         left: 0;
         width: 100%;
-        background: rgba(0, 0, 0, 0.95);
+        background: rgba(0,0,0,0.95);
         flex-direction: column;
         text-align: center;
         padding: 20px 0;
@@ -267,5 +217,8 @@ footer {
     h1 {
         font-size: 2rem;
     }
+
+    .glass-card {
+        padding: 25px;
+    }
 }
->>>>>>> 7779ef8f344554302eeff5c891c7f88cb25b4567
